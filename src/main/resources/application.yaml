@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: task-manager
+
+  datasource:
+    url: jdbc:postgresql://localhost:5434/jira
+    username: jira
+    password: JiraRush
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: 8081
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
