@@ -24,3 +24,7 @@ management:
     web:
       exposure:
         include: health,info,metrics
+
+jwt:
+  secret: TaskManagerSecretKeyForJwtTokenGeneration2026VerySecure
+  expiration: 86400000
