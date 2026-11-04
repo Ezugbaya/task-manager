@@ -1,5 +1,6 @@
 package com.javarush.taskmanager.dto;
 
+import com.javarush.taskmanager.entity.TaskStatus;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
@@ -15,6 +16,8 @@ public class TaskRequest {
     private String description;
 
     private LocalDateTime dueDate;
+
+    private TaskStatus status;
 
     public TaskRequest() {
     }
@@ -41,5 +44,13 @@ public class TaskRequest {
 
     public void setDueDate(LocalDateTime dueDate) {
         this.dueDate = dueDate;
+    }
+
+    public TaskStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(TaskStatus status) {
+        this.status = status;
     }
 }

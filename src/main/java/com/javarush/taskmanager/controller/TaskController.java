@@ -37,6 +37,10 @@ public class TaskController {
         task.setDescription(request.getDescription());
         task.setDueDate(request.getDueDate());
 
+        if (request.getStatus() != null) {
+            task.setStatus(request.getStatus());
+        }
+
         return taskService.createTask(task);
     }
 
@@ -45,10 +49,14 @@ public class TaskController {
             @PathVariable Long id,
             @Valid @RequestBody TaskRequest request) {
 
-        Task task = taskService.getTaskById(id);
+        Task task = new Task();
         task.setTitle(request.getTitle());
         task.setDescription(request.getDescription());
         task.setDueDate(request.getDueDate());
+
+        if (request.getStatus() != null) {
+            task.setStatus(request.getStatus());
+        }
 
         return taskService.updateTask(id, task);
     }
