@@ -5,6 +5,7 @@ import com.javarush.taskmanager.entity.TaskStatus;
 import com.javarush.taskmanager.repository.TaskRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import com.javarush.taskmanager.exception.ResourceNotFoundException;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -25,7 +26,8 @@ public class TaskService {
 
     public Task getTaskById(Long id) {
         return taskRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Задача не найдена: " + id));
+                .orElseThrow(() -> new ResourceNotFoundException(
+                        "Задача не найдена: " + id));
     }
 
     public Task createTask(Task task) {
