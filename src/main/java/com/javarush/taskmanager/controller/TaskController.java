@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/tasks")
@@ -49,7 +50,7 @@ public class TaskController {
             @PathVariable Long id,
             @Valid @RequestBody TaskRequest request) {
 
-        Task task = new Task();
+        Task task = taskService.getTaskById(id);
         task.setTitle(request.getTitle());
         task.setDescription(request.getDescription());
         task.setDueDate(request.getDueDate());
@@ -75,5 +76,10 @@ public class TaskController {
     @GetMapping("/overdue")
     public List<Task> getOverdueTasks() {
         return taskService.getOverdueTasks();
+    }
+
+    @GetMapping("/statistics")
+    public Map<TaskStatus, Long> getTaskStatistics() {
+        return taskService.getTaskStatistics();
     }
 }

@@ -28,3 +28,10 @@ management:
 jwt:
   secret: TaskManagerSecretKeyForJwtTokenGeneration2026VerySecure
   expiration: 86400000
+
+logging:
+  level:
+    root: INFO
+    com.javarush.taskmanager: DEBUG
+  file:
+    name: logs/task-manager.log

@@ -5,10 +5,11 @@ import com.javarush.taskmanager.entity.TaskStatus;
 import com.javarush.taskmanager.repository.TaskRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import com.javarush.taskmanager.exception.ResourceNotFoundException;
 
 import java.time.LocalDateTime;
+import java.util.EnumMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
 @Transactional
@@ -26,8 +27,7 @@ public class TaskService {
 
     public Task getTaskById(Long id) {
         return taskRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException(
-                        "Задача не найдена: " + id));
+                .orElseThrow(() -> new RuntimeException("Задача не найдена: " + id));
     }
 
     public Task createTask(Task task) {
@@ -56,5 +56,15 @@ public class TaskService {
 
     public List<Task> getOverdueTasks() {
         return taskRepository.findByDueDateBefore(LocalDateTime.now());
+    }
+
+    public Map<TaskStatus, Long> getTaskStatistics() {
+        Map<TaskStatus, Long> statistics = new EnumMap<>(TaskStatus.class);
+
+        for (TaskStatus status : TaskStatus.values()) {
+            statistics.put(status, taskRepository.countByStatus(status));
+        }
+
+        return statistics;
     }
 }
