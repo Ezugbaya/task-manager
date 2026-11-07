@@ -1,6 +1,8 @@
 package com.javarush.taskmanager.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+
 import java.time.LocalDateTime;
 
 @Entity
@@ -21,6 +23,9 @@ public class Task {
     @Column(nullable = false)
     private TaskStatus status = TaskStatus.NEW;
 
+    @Enumerated(EnumType.STRING)
+    private TaskPriority priority = TaskPriority.MEDIUM;
+
     private LocalDateTime dueDate;
 
     @Column(nullable = false, updatable = false)
@@ -28,10 +33,22 @@ public class Task {
 
     private LocalDateTime updatedAt;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "owner_id")
+    @JsonIgnore
+    private User owner;
+
     @PrePersist
     protected void onCreate() {
         createdAt = LocalDateTime.now();
         updatedAt = createdAt;
+
+        if (status == null) {
+            status = TaskStatus.NEW;
+        }
+        if (priority == null) {
+            priority = TaskPriority.MEDIUM;
+        }
     }
 
     @PreUpdate
@@ -41,8 +58,6 @@ public class Task {
 
     public Task() {
     }
-
-    // Getters and Setters
 
     public Long getId() {
         return id;
@@ -76,6 +91,14 @@ public class Task {
         this.status = status;
     }
 
+    public TaskPriority getPriority() {
+        return priority;
+    }
+
+    public void setPriority(TaskPriority priority) {
+        this.priority = priority;
+    }
+
     public LocalDateTime getDueDate() {
         return dueDate;
     }
@@ -90,5 +113,13 @@ public class Task {
 
     public LocalDateTime getUpdatedAt() {
         return updatedAt;
+    }
+
+    public User getOwner() {
+        return owner;
+    }
+
+    public void setOwner(User owner) {
+        this.owner = owner;
     }
 }

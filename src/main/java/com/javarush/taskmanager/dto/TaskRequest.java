@@ -1,5 +1,6 @@
 package com.javarush.taskmanager.dto;
 
+import com.javarush.taskmanager.entity.TaskPriority;
 import com.javarush.taskmanager.entity.TaskStatus;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
@@ -16,8 +17,8 @@ public class TaskRequest {
     private String description;
 
     private LocalDateTime dueDate;
-
     private TaskStatus status;
+    private TaskPriority priority;
 
     public TaskRequest() {
     }
@@ -52,5 +53,13 @@ public class TaskRequest {
 
     public void setStatus(TaskStatus status) {
         this.status = status;
+    }
+
+    public TaskPriority getPriority() {
+        return priority;
+    }
+
+    public void setPriority(TaskPriority priority) {
+        this.priority = priority;
     }
 }
