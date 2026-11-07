@@ -1,0 +1,439 @@
+2026-11-07T20:02:56.359+03:00  INFO 22568 --- [task-manager] [main] c.j.t.TaskManagerApplicationTests        : Starting TaskManagerApplicationTests using Java 24.0.2 with PID 22568 (started by ilya3 in C:\Users\ilya3\Downloads\task-manager\task-manager)
+2026-11-07T20:02:56.362+03:00 DEBUG 22568 --- [task-manager] [main] c.j.t.TaskManagerApplicationTests        : Running with Spring Boot v4.0.9, Spring v7.0.10
+2026-11-07T20:02:56.363+03:00  INFO 22568 --- [task-manager] [main] c.j.t.TaskManagerApplicationTests        : No active profile set, falling back to 1 default profile: "default"
+2026-11-07T20:02:57.251+03:00  INFO 22568 --- [task-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-07T20:02:57.311+03:00  INFO 22568 --- [task-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 2 JPA repository interfaces.
+2026-11-07T20:02:57.813+03:00  INFO 22568 --- [task-manager] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-11-07T20:02:57.891+03:00  INFO 22568 --- [task-manager] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.25.Final
+2026-11-07T20:02:58.331+03:00  INFO 22568 --- [task-manager] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-07T20:02:58.365+03:00  INFO 22568 --- [task-manager] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-07T20:02:58.549+03:00  INFO 22568 --- [task-manager] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@349996a6
+2026-11-07T20:02:58.550+03:00  INFO 22568 --- [task-manager] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-07T20:02:58.764+03:00  INFO 22568 --- [task-manager] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5434/jira]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: jira/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-07T20:02:59.639+03:00  INFO 22568 --- [task-manager] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-07T20:02:59.908+03:00  INFO 22568 --- [task-manager] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-07T20:02:59.982+03:00  INFO 22568 --- [task-manager] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-11-07T20:03:00.299+03:00  WARN 22568 --- [task-manager] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-11-07T20:03:00.388+03:00  INFO 22568 --- [task-manager] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-11-07T20:03:00.946+03:00  INFO 22568 --- [task-manager] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-11-07T20:03:01.001+03:00  INFO 22568 --- [task-manager] [main] c.j.t.TaskManagerApplicationTests        : Started TaskManagerApplicationTests in 5.028 seconds (process running for 6.135)
+2026-11-07T20:03:01.659+03:00  INFO 22568 --- [task-manager] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-07T20:03:01.662+03:00  INFO 22568 --- [task-manager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-11-07T20:03:01.665+03:00  INFO 22568 --- [task-manager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-11-07T20:09:39.508+03:00  INFO 19612 --- [task-manager] [main] c.j.t.controller.TaskControllerTest      : Starting TaskControllerTest using Java 24.0.2 with PID 19612 (started by ilya3 in C:\Users\ilya3\Downloads\task-manager\task-manager)
+2026-11-07T20:09:39.509+03:00 DEBUG 19612 --- [task-manager] [main] c.j.t.controller.TaskControllerTest      : Running with Spring Boot v4.0.9, Spring v7.0.10
+2026-11-07T20:09:39.510+03:00  INFO 19612 --- [task-manager] [main] c.j.t.controller.TaskControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2026-11-07T20:09:40.723+03:00  WARN 19612 --- [task-manager] [main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authController' defined in file [C:\Users\ilya3\Downloads\task-manager\task-manager\target\classes\com\javarush\taskmanager\controller\AuthController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.javarush.taskmanager.service.AuthService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2026-11-07T20:09:40.735+03:00  INFO 19612 --- [task-manager] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-11-07T20:09:40.759+03:00 ERROR 19612 --- [task-manager] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.javarush.taskmanager.controller.AuthController required a bean of type 'com.javarush.taskmanager.service.AuthService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.javarush.taskmanager.service.AuthService' in your configuration.
+
+2026-11-07T20:09:40.763+03:00  WARN 19612 --- [task-manager] [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.bean.override.BeanOverrideTestExecutionListener] to prepare test instance [com.javarush.taskmanager.controller.TaskControllerTest@2d913116]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@65753724 testClass = com.javarush.taskmanager.controller.TaskControllerTest, locations = [], classes = [com.javarush.taskmanager.TaskManagerApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.webmvc.test.autoconfigure.WebMvcTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.webmvc.test.autoconfigure.WebDriverContextCustomizer@4ae33a11, org.springframework.boot.web.server.context.SpringBootTestRandomPortContextCustomizer@3a94964, [ImportsContextCustomizer@78545d40 key = [org.springframework.boot.security.autoconfigure.web.servlet.ServletWebSecurityAutoConfiguration, org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration, org.springframework.boot.webmvc.test.autoconfigure.MockMvcWebDriverAutoConfiguration, org.springframework.boot.security.autoconfigure.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration, org.springframework.boot.security.autoconfigure.web.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.data.autoconfigure.web.DataWebAutoConfiguration, org.springframework.boot.webmvc.autoconfigure.error.ErrorMvcAutoConfiguration, org.springframework.boot.validation.autoconfigure.ValidationAutoConfiguration, org.springframework.boot.webmvc.autoconfigure.WebMvcAutoConfiguration, org.springframework.boot.security.test.autoconfigure.webmvc.SecurityMockMvcAutoConfiguration, org.springframework.boot.http.converter.autoconfigure.HttpMessageConvertersAutoConfiguration, org.springframework.boot.jackson.autoconfigure.JacksonAutoConfiguration, org.springframework.boot.webmvc.test.autoconfigure.MockMvcWebClientAutoConfiguration, org.springframework.boot.servlet.autoconfigure.HttpEncodingAutoConfiguration, org.springframework.boot.webmvc.test.autoconfigure.MockMvcAutoConfiguration, org.springframework.boot.security.autoconfigure.UserDetailsServiceAutoConfiguration]], org.springframework.boot.test.context.PropertyMappingContextCustomizer@2d29897f, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@2552f2cb, org.springframework.boot.test.context.filter.annotation.TypeExcludeFiltersContextCustomizer@20d14ecf, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@192f2f27, org.springframework.boot.test.autoconfigure.OnFailureConditionReportContextCustomizerFactory$OnFailureConditionReportContextCustomizer@6b5176f2, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@5cc69cfe, org.springframework.test.context.bean.override.BeanOverrideContextCustomizer@7858b0d2, org.springframework.test.context.support.DynamicPropertiesContextCustomizer@0, org.springframework.boot.test.context.SpringBootTestAnnotation@f10b05f2], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.lambda$loadContext$0(DefaultCacheAwareContextLoaderDelegate.java:195) ~[spring-test-7.0.10.jar:7.0.10]
+	at org.springframework.test.context.cache.DefaultContextCache.put(DefaultContextCache.java:214) ~[spring-test-7.0.10.jar:7.0.10]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:160) ~[spring-test-7.0.10.jar:7.0.10]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:128) ~[spring-test-7.0.10.jar:7.0.10]
+	at org.springframework.test.context.bean.override.BeanOverrideTestExecutionListener.injectFields(BeanOverrideTestExecutionListener.java:107) ~[spring-test-7.0.10.jar:7.0.10]
+	at org.springframework.test.context.bean.override.BeanOverrideTestExecutionListener.prepareTestInstance(BeanOverrideTestExecutionListener.java:70) ~[spring-test-7.0.10.jar:7.0.10]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260) ~[spring-test-7.0.10.jar:7.0.10]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:242) ~[spring-test-7.0.10.jar:7.0.10]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$1(ClassBasedTestDescriptor.java:423) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:428) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$0(ClassBasedTestDescriptor.java:422) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:186) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215) ~[na:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1716) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:570) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:153) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:176) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:636) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:422) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$0(ClassBasedTestDescriptor.java:334) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:333) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$1(ClassBasedTestDescriptor.java:322) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$0(ClassBasedTestDescriptor.java:321) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:27) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:127) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:126) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:70) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$0(NodeTestTask.java:144) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:144) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:110) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:36) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:52) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:58) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.executeEngine(EngineExecutionOrchestrator.java:246) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.failOrExecuteEngine(EngineExecutionOrchestrator.java:218) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:179) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:66) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:157) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:65) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:125) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$2(InterceptingLauncher.java:57) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:56) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.apache.maven.surefire.api.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:125) ~[surefire-api-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.executeWithCancellationToken(LauncherAdapter.java:68) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.execute(LauncherAdapter.java:54) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:203) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:168) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:136) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.5.6.jar:3.5.6]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authController' defined in file [C:\Users\ilya3\Downloads\task-manager\task-manager\target\classes\com\javarush\taskmanager\controller\AuthController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.javarush.taskmanager.service.AuthService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1378) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1217) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1225) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1191) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994) ~[spring-context-7.0.10.jar:7.0.10]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.10.jar:7.0.10]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744) ~[spring-boot-4.0.9.jar:4.0.9]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:433) ~[spring-boot-4.0.9.jar:4.0.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:309) ~[spring-boot-4.0.9.jar:4.0.9]
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$2(SpringBootContextLoader.java:143) ~[spring-boot-test-4.0.9.jar:4.0.9]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58) ~[spring-core-7.0.10.jar:7.0.10]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46) ~[spring-core-7.0.10.jar:7.0.10]
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1453) ~[spring-boot-4.0.9.jar:4.0.9]
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:588) ~[spring-boot-test-4.0.9.jar:4.0.9]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:143) ~[spring-boot-test-4.0.9.jar:4.0.9]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:102) ~[spring-boot-test-4.0.9.jar:4.0.9]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:247) ~[spring-test-7.0.10.jar:7.0.10]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.lambda$loadContext$0(DefaultCacheAwareContextLoaderDelegate.java:167) ~[spring-test-7.0.10.jar:7.0.10]
+	... 86 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.javarush.taskmanager.service.AuthService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:2304) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1732) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1658) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:912) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-7.0.10.jar:7.0.10]
+	... 112 common frames omitted
+
+2026-11-07T20:11:34.289+03:00  INFO 16552 --- [task-manager] [main] c.j.t.controller.TaskControllerTest      : Starting TaskControllerTest using Java 24.0.2 with PID 16552 (started by ilya3 in C:\Users\ilya3\Downloads\task-manager\task-manager)
+2026-11-07T20:11:34.291+03:00 DEBUG 16552 --- [task-manager] [main] c.j.t.controller.TaskControllerTest      : Running with Spring Boot v4.0.9, Spring v7.0.10
+2026-11-07T20:11:34.291+03:00  INFO 16552 --- [task-manager] [main] c.j.t.controller.TaskControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2026-11-07T20:11:35.524+03:00  WARN 16552 --- [task-manager] [main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtAuthenticationFilter' defined in file [C:\Users\ilya3\Downloads\task-manager\task-manager\target\classes\com\javarush\taskmanager\security\JwtAuthenticationFilter.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.javarush.taskmanager.security.JwtService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2026-11-07T20:11:35.534+03:00  INFO 16552 --- [task-manager] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-11-07T20:11:35.555+03:00 ERROR 16552 --- [task-manager] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.javarush.taskmanager.security.JwtAuthenticationFilter required a bean of type 'com.javarush.taskmanager.security.JwtService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.javarush.taskmanager.security.JwtService' in your configuration.
+
+2026-11-07T20:11:35.560+03:00  WARN 16552 --- [task-manager] [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.bean.override.BeanOverrideTestExecutionListener] to prepare test instance [com.javarush.taskmanager.controller.TaskControllerTest@15f2a43f]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@56d822dc testClass = com.javarush.taskmanager.controller.TaskControllerTest, locations = [], classes = [com.javarush.taskmanager.TaskManagerApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.webmvc.test.autoconfigure.WebMvcTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.webmvc.test.autoconfigure.WebDriverContextCustomizer@4ae33a11, org.springframework.boot.web.server.context.SpringBootTestRandomPortContextCustomizer@3a94964, [ImportsContextCustomizer@697a92af key = [org.springframework.boot.security.autoconfigure.web.servlet.ServletWebSecurityAutoConfiguration, org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration, org.springframework.boot.webmvc.test.autoconfigure.MockMvcWebDriverAutoConfiguration, org.springframework.boot.security.autoconfigure.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration, org.springframework.boot.security.autoconfigure.web.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.data.autoconfigure.web.DataWebAutoConfiguration, org.springframework.boot.webmvc.autoconfigure.error.ErrorMvcAutoConfiguration, org.springframework.boot.validation.autoconfigure.ValidationAutoConfiguration, org.springframework.boot.webmvc.autoconfigure.WebMvcAutoConfiguration, org.springframework.boot.security.test.autoconfigure.webmvc.SecurityMockMvcAutoConfiguration, org.springframework.boot.http.converter.autoconfigure.HttpMessageConvertersAutoConfiguration, org.springframework.boot.jackson.autoconfigure.JacksonAutoConfiguration, org.springframework.boot.webmvc.test.autoconfigure.MockMvcWebClientAutoConfiguration, org.springframework.boot.servlet.autoconfigure.HttpEncodingAutoConfiguration, org.springframework.boot.webmvc.test.autoconfigure.MockMvcAutoConfiguration, org.springframework.boot.security.autoconfigure.UserDetailsServiceAutoConfiguration]], org.springframework.boot.test.context.PropertyMappingContextCustomizer@2d29897f, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@2552f2cb, org.springframework.boot.test.context.filter.annotation.TypeExcludeFiltersContextCustomizer@20d14ecf, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@192f2f27, org.springframework.boot.test.autoconfigure.OnFailureConditionReportContextCustomizerFactory$OnFailureConditionReportContextCustomizer@6b5176f2, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@5cc69cfe, org.springframework.test.context.bean.override.BeanOverrideContextCustomizer@cd40e2cf, org.springframework.test.context.support.DynamicPropertiesContextCustomizer@0, org.springframework.boot.test.context.SpringBootTestAnnotation@1a01982f], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.lambda$loadContext$0(DefaultCacheAwareContextLoaderDelegate.java:195) ~[spring-test-7.0.10.jar:7.0.10]
+	at org.springframework.test.context.cache.DefaultContextCache.put(DefaultContextCache.java:214) ~[spring-test-7.0.10.jar:7.0.10]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:160) ~[spring-test-7.0.10.jar:7.0.10]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:128) ~[spring-test-7.0.10.jar:7.0.10]
+	at org.springframework.test.context.bean.override.BeanOverrideTestExecutionListener.injectFields(BeanOverrideTestExecutionListener.java:107) ~[spring-test-7.0.10.jar:7.0.10]
+	at org.springframework.test.context.bean.override.BeanOverrideTestExecutionListener.prepareTestInstance(BeanOverrideTestExecutionListener.java:70) ~[spring-test-7.0.10.jar:7.0.10]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260) ~[spring-test-7.0.10.jar:7.0.10]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:242) ~[spring-test-7.0.10.jar:7.0.10]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$1(ClassBasedTestDescriptor.java:423) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:428) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$0(ClassBasedTestDescriptor.java:422) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:186) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215) ~[na:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1716) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:570) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:153) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:176) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:636) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:422) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$0(ClassBasedTestDescriptor.java:334) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:333) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$1(ClassBasedTestDescriptor.java:322) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$0(ClassBasedTestDescriptor.java:321) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:27) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:127) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:126) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:70) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$0(NodeTestTask.java:144) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:144) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:110) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:36) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:52) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:58) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.executeEngine(EngineExecutionOrchestrator.java:246) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.failOrExecuteEngine(EngineExecutionOrchestrator.java:218) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:179) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:66) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:157) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:65) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:125) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$2(InterceptingLauncher.java:57) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:56) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.apache.maven.surefire.api.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:125) ~[surefire-api-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.executeWithCancellationToken(LauncherAdapter.java:68) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.execute(LauncherAdapter.java:54) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:203) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:168) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:136) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.5.6.jar:3.5.6]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtAuthenticationFilter' defined in file [C:\Users\ilya3\Downloads\task-manager\task-manager\target\classes\com\javarush\taskmanager\security\JwtAuthenticationFilter.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.javarush.taskmanager.security.JwtService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1378) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1217) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1225) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1191) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994) ~[spring-context-7.0.10.jar:7.0.10]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.10.jar:7.0.10]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744) ~[spring-boot-4.0.9.jar:4.0.9]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:433) ~[spring-boot-4.0.9.jar:4.0.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:309) ~[spring-boot-4.0.9.jar:4.0.9]
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$2(SpringBootContextLoader.java:143) ~[spring-boot-test-4.0.9.jar:4.0.9]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58) ~[spring-core-7.0.10.jar:7.0.10]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46) ~[spring-core-7.0.10.jar:7.0.10]
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1453) ~[spring-boot-4.0.9.jar:4.0.9]
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:588) ~[spring-boot-test-4.0.9.jar:4.0.9]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:143) ~[spring-boot-test-4.0.9.jar:4.0.9]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:102) ~[spring-boot-test-4.0.9.jar:4.0.9]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:247) ~[spring-test-7.0.10.jar:7.0.10]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.lambda$loadContext$0(DefaultCacheAwareContextLoaderDelegate.java:167) ~[spring-test-7.0.10.jar:7.0.10]
+	... 86 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.javarush.taskmanager.security.JwtService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:2304) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1732) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1658) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:912) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-7.0.10.jar:7.0.10]
+	... 112 common frames omitted
+
+2026-11-07T20:13:59.247+03:00  INFO 17472 --- [task-manager] [main] c.j.t.controller.TaskControllerTest      : Starting TaskControllerTest using Java 24.0.2 with PID 17472 (started by ilya3 in C:\Users\ilya3\Downloads\task-manager\task-manager)
+2026-11-07T20:13:59.248+03:00 DEBUG 17472 --- [task-manager] [main] c.j.t.controller.TaskControllerTest      : Running with Spring Boot v4.0.9, Spring v7.0.10
+2026-11-07T20:13:59.249+03:00  INFO 17472 --- [task-manager] [main] c.j.t.controller.TaskControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2026-11-07T20:14:00.858+03:00  WARN 17472 --- [task-manager] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 0b96ad37-7f65-4e51-a3e7-3e32d49ff33c
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-11-07T20:14:00.894+03:00  INFO 17472 --- [task-manager] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-11-07T20:14:00.894+03:00  INFO 17472 --- [task-manager] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-07T20:14:00.896+03:00  INFO 17472 --- [task-manager] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2026-11-07T20:14:00.963+03:00  INFO 17472 --- [task-manager] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-11-07T20:14:01.105+03:00  INFO 17472 --- [task-manager] [main] c.j.t.controller.TaskControllerTest      : Started TaskControllerTest in 2.273 seconds (process running for 3.274)
+2026-11-07T20:15:11.334+03:00  INFO 20820 --- [task-manager] [main] c.j.t.controller.TaskControllerTest      : Starting TaskControllerTest using Java 24.0.2 with PID 20820 (started by ilya3 in C:\Users\ilya3\Downloads\task-manager\task-manager)
+2026-11-07T20:15:11.335+03:00 DEBUG 20820 --- [task-manager] [main] c.j.t.controller.TaskControllerTest      : Running with Spring Boot v4.0.9, Spring v7.0.10
+2026-11-07T20:15:11.336+03:00  INFO 20820 --- [task-manager] [main] c.j.t.controller.TaskControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2026-11-07T20:15:12.940+03:00  WARN 20820 --- [task-manager] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 8092f42f-00d0-47c7-b2f3-705090191940
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-11-07T20:15:12.971+03:00  INFO 20820 --- [task-manager] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-11-07T20:15:12.971+03:00  INFO 20820 --- [task-manager] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-07T20:15:12.973+03:00  INFO 20820 --- [task-manager] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2026-11-07T20:15:13.028+03:00  INFO 20820 --- [task-manager] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-11-07T20:15:13.163+03:00  INFO 20820 --- [task-manager] [main] c.j.t.controller.TaskControllerTest      : Started TaskControllerTest in 2.238 seconds (process running for 3.26)
+2026-11-07T20:18:03.490+03:00  INFO 9712 --- [task-manager] [main] c.j.t.controller.TaskControllerTest      : Starting TaskControllerTest using Java 24.0.2 with PID 9712 (started by ilya3 in C:\Users\ilya3\Downloads\task-manager\task-manager)
+2026-11-07T20:18:03.491+03:00 DEBUG 9712 --- [task-manager] [main] c.j.t.controller.TaskControllerTest      : Running with Spring Boot v4.0.9, Spring v7.0.10
+2026-11-07T20:18:03.492+03:00  INFO 9712 --- [task-manager] [main] c.j.t.controller.TaskControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2026-11-07T20:18:05.224+03:00  WARN 9712 --- [task-manager] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 06898876-3150-4e99-95bb-e62f022fdd55
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-11-07T20:18:05.258+03:00  INFO 9712 --- [task-manager] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-11-07T20:18:05.258+03:00  INFO 9712 --- [task-manager] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-07T20:18:05.260+03:00  INFO 9712 --- [task-manager] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2026-11-07T20:18:05.312+03:00  INFO 9712 --- [task-manager] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-11-07T20:18:05.463+03:00  INFO 9712 --- [task-manager] [main] c.j.t.controller.TaskControllerTest      : Started TaskControllerTest in 2.389 seconds (process running for 3.413)
+2026-11-07T20:20:32.670+03:00  INFO 19308 --- [task-manager] [main] c.j.t.controller.TaskControllerTest      : Starting TaskControllerTest using Java 24.0.2 with PID 19308 (started by ilya3 in C:\Users\ilya3\Downloads\task-manager\task-manager)
+2026-11-07T20:20:32.671+03:00 DEBUG 19308 --- [task-manager] [main] c.j.t.controller.TaskControllerTest      : Running with Spring Boot v4.0.9, Spring v7.0.10
+2026-11-07T20:20:32.672+03:00  INFO 19308 --- [task-manager] [main] c.j.t.controller.TaskControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2026-11-07T20:20:34.310+03:00  WARN 19308 --- [task-manager] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 959a55cc-2c67-41a8-89d9-dc46ca37a0a5
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-11-07T20:20:34.338+03:00  INFO 19308 --- [task-manager] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-11-07T20:20:34.339+03:00  INFO 19308 --- [task-manager] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-07T20:20:34.340+03:00  INFO 19308 --- [task-manager] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-11-07T20:20:34.397+03:00  INFO 19308 --- [task-manager] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-11-07T20:20:34.523+03:00  INFO 19308 --- [task-manager] [main] c.j.t.controller.TaskControllerTest      : Started TaskControllerTest in 2.259 seconds (process running for 3.291)
+2026-11-07T20:22:23.838+03:00  INFO 12504 --- [task-manager] [main] c.j.t.controller.TaskControllerTest      : Starting TaskControllerTest using Java 24.0.2 with PID 12504 (started by ilya3 in C:\Users\ilya3\Downloads\task-manager\task-manager)
+2026-11-07T20:22:23.840+03:00 DEBUG 12504 --- [task-manager] [main] c.j.t.controller.TaskControllerTest      : Running with Spring Boot v4.0.9, Spring v7.0.10
+2026-11-07T20:22:23.841+03:00  INFO 12504 --- [task-manager] [main] c.j.t.controller.TaskControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2026-11-07T20:22:25.515+03:00  WARN 12504 --- [task-manager] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 4c6e58b3-2c4a-4466-81cf-ee84736da407
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-11-07T20:22:25.547+03:00  INFO 12504 --- [task-manager] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-11-07T20:22:25.548+03:00  INFO 12504 --- [task-manager] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-07T20:22:25.550+03:00  INFO 12504 --- [task-manager] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2026-11-07T20:22:25.603+03:00  INFO 12504 --- [task-manager] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-11-07T20:22:25.746+03:00  INFO 12504 --- [task-manager] [main] c.j.t.controller.TaskControllerTest      : Started TaskControllerTest in 2.334 seconds (process running for 3.391)
+2026-11-07T20:22:26.327+03:00  INFO 12504 --- [task-manager] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.javarush.taskmanager.TaskManagerApplicationTests]: TaskManagerApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-07T20:22:26.336+03:00  INFO 12504 --- [task-manager] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.javarush.taskmanager.TaskManagerApplication for test class com.javarush.taskmanager.TaskManagerApplicationTests
+2026-11-07T20:22:26.339+03:00  INFO 12504 --- [task-manager] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.javarush.taskmanager.TaskManagerApplicationTests]: TaskManagerApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-07T20:22:26.341+03:00  INFO 12504 --- [task-manager] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.javarush.taskmanager.TaskManagerApplication for test class com.javarush.taskmanager.TaskManagerApplicationTests
+2026-11-07T20:22:26.353+03:00  INFO 12504 --- [task-manager] [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2026-11-07T20:22:26.373+03:00  INFO 12504 --- [task-manager] [main] c.j.t.TaskManagerApplicationTests        : Starting TaskManagerApplicationTests using Java 24.0.2 with PID 12504 (started by ilya3 in C:\Users\ilya3\Downloads\task-manager\task-manager)
+2026-11-07T20:22:26.373+03:00 DEBUG 12504 --- [task-manager] [main] c.j.t.TaskManagerApplicationTests        : Running with Spring Boot v4.0.9, Spring v7.0.10
+2026-11-07T20:22:26.374+03:00  INFO 12504 --- [task-manager] [main] c.j.t.TaskManagerApplicationTests        : No active profile set, falling back to 1 default profile: "default"
+2026-11-07T20:22:26.752+03:00  INFO 12504 --- [task-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-07T20:22:26.796+03:00  INFO 12504 --- [task-manager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 2 JPA repository interfaces.
+2026-11-07T20:22:27.147+03:00  INFO 12504 --- [task-manager] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-11-07T20:22:27.209+03:00  INFO 12504 --- [task-manager] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.25.Final
+2026-11-07T20:22:27.513+03:00  INFO 12504 --- [task-manager] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-07T20:22:27.545+03:00  INFO 12504 --- [task-manager] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-07T20:22:27.727+03:00  INFO 12504 --- [task-manager] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@34d08905
+2026-11-07T20:22:27.729+03:00  INFO 12504 --- [task-manager] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-07T20:22:27.805+03:00  INFO 12504 --- [task-manager] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5434/jira]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: jira/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-07T20:22:28.599+03:00  INFO 12504 --- [task-manager] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-07T20:22:28.776+03:00  INFO 12504 --- [task-manager] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-07T20:22:28.838+03:00  INFO 12504 --- [task-manager] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-11-07T20:22:29.086+03:00  WARN 12504 --- [task-manager] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-11-07T20:22:29.126+03:00  INFO 12504 --- [task-manager] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-11-07T20:22:29.396+03:00  INFO 12504 --- [task-manager] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-11-07T20:22:29.446+03:00  INFO 12504 --- [task-manager] [main] c.j.t.TaskManagerApplicationTests        : Started TaskManagerApplicationTests in 3.093 seconds (process running for 7.09)
+2026-11-07T20:22:29.528+03:00  INFO 12504 --- [task-manager] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-07T20:22:29.530+03:00  INFO 12504 --- [task-manager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-11-07T20:22:29.534+03:00  INFO 12504 --- [task-manager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
