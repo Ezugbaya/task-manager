@@ -1,7 +1,7 @@
 services:
   db:
     image: postgres:18
-    container_name: postgres-db
+    container_name: task-manager-postgres-db
     environment:
       POSTGRES_USER: jira
       POSTGRES_PASSWORD: JiraRush
@@ -10,16 +10,17 @@ services:
     ports:
       - "${DB_PORT:-5434}:5432"
     volumes:
-      - ./pgdata:/var/lib/postgresql/data
+      - ../../pgdata:/var/lib/postgresql/data
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U jira -d jira"]
       interval: 5s
       timeout: 3s
       retries: 10
+    restart: unless-stopped
 
   db-test:
     image: postgres:18
-    container_name: postgres-db-test
+    container_name: task-manager-postgres-db-test
     environment:
       POSTGRES_USER: jira
       POSTGRES_PASSWORD: JiraRush
@@ -28,9 +29,70 @@ services:
     ports:
       - "${DB_TEST_PORT:-5433}:5432"
     volumes:
-      - ./pgdata-test:/var/lib/postgresql/data
+      - ../../pgdata-test:/var/lib/postgresql/data
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U jira -d jira-test"]
       interval: 5s
       timeout: 3s
       retries: 10
+    restart: unless-stopped
+
+  app:
+    build: .
+    container_name: task-manager-app
+    ports:
+      - "8081:8081"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/jira
+      SPRING_DATASOURCE_USERNAME: jira
+      SPRING_DATASOURCE_PASSWORD: JiraRush
+      JWT_SECRET: TaskManagerSecretKeyForJwtTokenGeneration2026VerySecure
+      JWT_EXPIRATION: 86400000
+      LOGGING_FILE_NAME: /app/logs/task-manager.log
+    volumes:
+      - ./logs:/app/logs
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.17.0
+    container_name: task-manager-elasticsearch
+    environment:
+      discovery.type: single-node
+      xpack.security.enabled: "false"
+      ES_JAVA_OPTS: "-Xms512m -Xmx512m"
+    ports:
+      - "9200:9200"
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
+    restart: unless-stopped
+
+  logstash:
+    image: docker.elastic.co/logstash/logstash:8.17.0
+    container_name: task-manager-logstash
+    volumes:
+      - ./logstash/pipeline:/usr/share/logstash/pipeline:ro
+      - ./logs:/var/log/task-manager:ro
+      - logstashdata:/usr/share/logstash/data
+    ports:
+      - "5044:5044"
+    depends_on:
+      - elasticsearch
+    restart: unless-stopped
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:8.17.0
+    container_name: task-manager-kibana
+    environment:
+      ELASTICSEARCH_HOSTS: '["http://elasticsearch:9200"]'
+    ports:
+      - "5601:5601"
+    depends_on:
+      - elasticsearch
+    restart: unless-stopped
+
+volumes:
+  esdata:
+  logstashdata:
